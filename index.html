@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scratch to Python</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="scripts/sandbox.js" defer type="module"></script>
+
+    <!-- Scripts for Python Interpreter -->
+    <script src="http://www.skulpt.org/js/skulpt.min.js" defer></script>
+    <script src="http://www.skulpt.org/js/skulpt-stdlib.js" defer></script>
   </head>
   <body>
-    <!-- All of these links are not functioning right now-->
     <nav>
+      <!-- All of these links are not functioning right now-->
       <a href="#" id="home">Scratch to Python</a>
       <div id="links">
         <a href="#">Course</a>
         <a href="#">Sandbox</a>
       </div>
     </nav>
+
+    <textarea id="yourcode" cols="40" rows="10">
+print('Hello World')
+</textarea
+    ><br />
+    <button onclick="runit()">Run</button>
+
+    <pre id="output"></pre>
+
+    <button onclick="addSay()">Say</button>
   </body>
 </html>
