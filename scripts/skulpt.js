@@ -19,5 +19,10 @@ window.runit = async () => {
   Sk.pre = "output";
   Sk.configure({ output: outf, read: builtinRead });
   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = "mycanvas";
-  await Sk.importMainWithBody("<stdin>", false, prog, true);
+  try {
+    await Sk.importMainWithBody("<stdin>", false, prog, true);
+  } catch (error) {
+    // I coded the error handling
+    pre.innerHTML = `<span class="error">${error}</span>`;
+  }
 };
